@@ -64,7 +64,8 @@
               "TopicName"
             ]
           },
-          "IsLogging": true
+          "IsLogging": true,
+          "EnableLogFileValidation": true
         }
       },
       "kmsKey": {
