@@ -12,8 +12,8 @@ jobs:
       - name: Check out the repository
         uses: actions/checkout@v2
 
-      - name: Build the image
-        run: docker build -t $IMAGE_NAME .
+   ##   - name: Build the image
+   ##     run: docker build -t $IMAGE_NAME .
 
       - name: Prisma Cloud image scan
         id: scan
