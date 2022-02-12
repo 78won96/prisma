@@ -1,7 +1,7 @@
 on: [ push, workflow_dispatch ]
 
 env:
-    IMAGE_NAME: ngnix:lastest
+    IMAGE_NAME: ${{ github.repository }}:${{ github.sha }}
 
 jobs:
   build-and-scan:
@@ -12,8 +12,8 @@ jobs:
       - name: Check out the repository
         uses: actions/checkout@v2
         
-  ##    - name: Build the image
-  ##      run: docker build -t ngnix:latest .
+      - name: Build the image
+        run: docker build -t ngnix:latest .
 
       - name: Prisma Cloud image scan
         id: scan
