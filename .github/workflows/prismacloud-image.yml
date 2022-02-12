@@ -11,12 +11,9 @@ jobs:
     steps:
       - name: Check out the repository
         uses: actions/checkout@v2
-
-      - name: docker 
-        uses: docker/setup-buildx-action@v1.6.0
         
-      - name: Build the image
-        run: docker build -t ngnix:latest .
+  ##    - name: Build the image
+  ##      run: docker build -t ngnix:latest .
 
       - name: Prisma Cloud image scan
         id: scan
