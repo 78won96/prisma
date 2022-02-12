@@ -1,0 +1,8 @@
+{
+    "prismaCloud.accessURL.PrismaCloudAPI URL": "https://api.sg.prismacloud.io",
+    "prismaCloud.assetDetails.AssetName": "Iac-Scan",
+    "prismaCloud.loginCredentials.AccessKey": "ec04b67c-b035-4faa-9af7-e74a41cedd6b",
+    "prismaCloud.loginCredentials.SecretKey": "gOZxeFBwd2YBwkiJL0MqR9SxlEw=",
+    "prismaCloud.tagsDetails.PrismaCloudTags": "env:prod",
+    "checkov.prismaURL": "api.p"
+}
