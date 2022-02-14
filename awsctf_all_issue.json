@@ -62,9 +62,13 @@
                 "MaxAge": "1800"
               }
             ]
+          },
+          "PublicAccessBlockConfiguration": {
+            "BlockPublicAcls": true
           }
         }
       },
+
       "secg": {
         "Type": "AWS::EC2::SecurityGroup",
         "Properties": {
@@ -81,4 +85,3 @@
     }
   }
   
-  ## re-commit 을 위한 수정
