@@ -1,5 +1,5 @@
 FROM ubuntu:latest
-	# checkov:skip=CKV_DOCKER_3: ADD REASON
+
 
 #Step:2 nginx install
 RUN apt-get update && apt-get install -y -q nginx
