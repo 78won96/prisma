@@ -1,6 +1,9 @@
 name: prisma-image-scan
 
-on: [ push, workflow_dispatch ]
+on:
+    push:
+      branches: [ number-to-palpahbet ]
+
 
 env:
     IMAGE_NAME: ${{ github.repository }}:${{ github.sha }}
