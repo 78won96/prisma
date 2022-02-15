@@ -1,14 +1,22 @@
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-2: <html>
-3: <head>
-4: <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-5: </head>
-6: <body>
-7: <h1>XSS Sample</h1>
-8: <%
-9: <!- 외부로 부터 이름을 받음 -->
-10: String name = request.getParameter("name");
-11: %>
-12: <!-- 외부로 부터 받은 name이 그대로 출력 -->
-13: <p>NAME:<%=name%></p>
-14: </body>
+ ……
+ public class U9102 implements ContactDAO {
+ public List<Contact> listContacts() {
+ PersistenceManager pm = getPersistenceManagerFactory().getPersistenceManager();
+ String query = "select from " + Contact.class.getName();
+ try {
+ Properties props = new Properties();
+ String fileName = "contacts.txt";
+ FileInputStream in = new FileInputStream(fileName);
+ if( in != null ) { props.load(in); }
+ in.close();
+ // 외부로 부터 입력을 받는다
+String name = props.getProperty("name");
+ if( name != null ) {
+ query += " where name = '" + name + " '" ;
+ }
+ } catch (IOException e) { …… }
+
+ // 와부 입력값이 JDO 객체의 인자로 사용된다.
+ return (List<Contact>) pm.newQuery(query).execute();
+ }
+ ……
