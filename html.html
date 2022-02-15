@@ -1,0 +1,14 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+2: <html>
+3: <head>
+4: <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+5: </head>
+6: <body>
+7: <h1>XSS Sample</h1>
+8: <%
+9: <!- 외부로 부터 이름을 받음 -->
+10: String name = request.getParameter("name");
+11: %>
+12: <!-- 외부로 부터 받은 name이 그대로 출력 -->
+13: <p>NAME:<%=name%></p>
+14: </body>
