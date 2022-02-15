@@ -7,7 +7,7 @@
       }
     },
     "Resources": {
-      "S3Bucket": {
+      "S3Bucket": {	
         "Type": "AWS::S3::Bucket",
         "Properties": {
           "AccessControl": { "Ref" : "AccessControlFile" },
