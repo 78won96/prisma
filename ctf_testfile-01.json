@@ -165,6 +165,9 @@
                 "Ref": "mySecurityGroup"
               }
             ]
+          },
+          "DomainEndpointOptions": {
+            "EnforceHTTPS": true
           }
         }
       },
