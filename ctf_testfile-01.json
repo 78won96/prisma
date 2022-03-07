@@ -166,8 +166,8 @@
               }
             ]
           },
-          "DomainEndpointOptions": {
-            "EnforceHTTPS": true
+          "EncryptionAtRestOptions": {
+            "Enabled": true
           }
         }
       },
